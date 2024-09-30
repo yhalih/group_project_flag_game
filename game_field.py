@@ -1,8 +1,9 @@
 from pygame import *
 import time
-import copy
 import soldier
 import result
+import initial
+from consts import *
 
 
 def can_game_continue(soldier_location, mine_locations, flag_locations):
@@ -28,10 +29,10 @@ def can_game_continue(soldier_location, mine_locations, flag_locations):
 
 def find_new_location(soldier_location, board):
     pressed = key.get_pressed()
-    new_location = copy.deepcopy(soldier_location)
+    new_location = [soldier_location[0], soldier_location[1]]
 
     # Showing the secret screen
-    if pressed[K_KP_ENTER]:
+    if pressed[K_RETURN]:
         # show secret screen
         time.sleep(1)
 
@@ -45,13 +46,13 @@ def find_new_location(soldier_location, board):
         new_location[1] -= 1
 
     # move to new location if in range
-    if 0 <= new_location[0] < 25 and 0 <= new_location[1] < 50:
+    if 0 <= new_location[0] < ROWS_IN_BOARD and 0 <= new_location[1] < COLS_IN_BOARD:
         soldier_location = new_location
-        placement(board, 'soldier.png', soldier_location)
+        initial.placement(board, 'soldier.png', soldier_location)
 
     display.update()
 
-    return soldier_location
+    return tuple(soldier_location)
 
 
 def move_soldier(soldier_location, mine_locations, flag_locations, board):
