@@ -1,6 +1,7 @@
 from pygame import *
 import time
 import soldier
+import initial
 
 
 def end(soldier_location, mine_locations):
@@ -21,6 +22,6 @@ def end_print(win, soldier_location, board):
     if win:
         print("You won!")
     else:
-        placement(board, 'explosion.png', soldier_location)
-        placement(board, 'injury', soldier_location)
+        initial.placement(board, 'explosion.png', soldier_location)
+        initial.placement(board, 'injury', soldier_location)
         print("You lost!")
