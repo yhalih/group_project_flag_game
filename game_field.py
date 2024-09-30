@@ -2,6 +2,7 @@ from pygame import *
 import time
 import copy
 import soldier
+import result
 
 
 def can_game_continue(soldier_location, mine_locations, flag_locations):
@@ -58,4 +59,4 @@ def move_soldier(soldier_location):
     while can_continue:
         soldier_location = find_new_location(soldier_location)
         can_continue = can_game_continue()
-    end(soldier_location)
+    result.end(soldier_location)
