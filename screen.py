@@ -3,9 +3,8 @@ from pygame import *
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
-green= (64,200,45)
+green = (64, 200, 45)
 screen = display.set_mode((800, 600))
-
 
 running = True
 
