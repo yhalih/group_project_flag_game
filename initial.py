@@ -16,8 +16,11 @@ def placement(board, item_, wanted_place):
 
 def random_bush_bomb(repeted_item, board, bomb_bush_num= BUSH_BOMB_NUM):
     places_list=[]
-    flag_and_start=[soldier.soldier_legs, so`ldier.soldier_body]
+    flag_and_start=[soldier.soldier_legs, soldier.soldier_body]
     while len(places_list)<bomb_bush_num:
         rand_x=
+        rand_y=
+        rand_tup= (rand_x, rand_y)
+        if rand_tup
 
 
