@@ -1,5 +1,6 @@
-
-def soldier_legs (x_index, y_index):
+def soldier_legs (location):
+    x_index= location [0]
+    y_index= location [1]
     x_index1 = x_index + 3
     x_index2 = x_index1
     y_index1 = y_index
@@ -9,9 +10,10 @@ def soldier_legs (x_index, y_index):
     list_tuple= [tup1,tup2]
     return list_tuple
 
-print(soldier_legs(0,0))
 
-def soldier_body(x_index, y_index):
+def soldier_body(location):
+    x_index = location[0]
+    y_index = location[1]
     list = []
     for i in range (2):
         list.append((x_index, y_index))
@@ -23,4 +25,3 @@ def soldier_body(x_index, y_index):
         y_index += 1
     return list
 
-print(soldier_body(0,0))
