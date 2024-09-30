@@ -54,9 +54,13 @@ def find_new_location(soldier_location):
     return soldier_location
 
 
-def move_soldier(soldier_location):
+def move_soldier(soldier_location, mine_locations):
     can_continue = True
+
+    # make a move and then check if game ended
     while can_continue:
         soldier_location = find_new_location(soldier_location)
-        can_continue = can_game_continue()
-    result.end(soldier_location)
+        can_continue = can_game_continue(soldier_location)
+
+    # Once game has ended
+    result.end(soldier_location, mine_locations)
