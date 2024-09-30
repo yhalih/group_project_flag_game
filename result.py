@@ -17,10 +17,10 @@ def end(soldier_location, mine_locations):
     quit()
 
 
-def end_print(win, soldier_location):
+def end_print(win, soldier_location, board):
     if win:
         print("You won!")
     else:
-        placement('explosion.png', soldier_location)
-        placement('injury', soldier_location)
+        placement(board, 'explosion.png', soldier_location)
+        placement(board, 'injury', soldier_location)
         print("You lost!")

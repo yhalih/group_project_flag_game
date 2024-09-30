@@ -26,7 +26,7 @@ def can_game_continue(soldier_location, mine_locations, flag_locations):
     return can_continue
 
 
-def find_new_location(soldier_location):
+def find_new_location(soldier_location, board):
     pressed = key.get_pressed()
     new_location = copy.deepcopy(soldier_location)
 
@@ -47,20 +47,20 @@ def find_new_location(soldier_location):
     # move to new location if in range
     if 0 <= new_location[0] < 25 and 0 <= new_location[1] < 50:
         soldier_location = new_location
-        placement(soldier_location)
+        placement(board, 'soldier.png', soldier_location)
 
     display.update()
 
     return soldier_location
 
 
-def move_soldier(soldier_location, mine_locations):
+def move_soldier(soldier_location, mine_locations, flag_locations, board):
     can_continue = True
 
     # make a move and then check if game ended
     while can_continue:
-        soldier_location = find_new_location(soldier_location)
-        can_continue = can_game_continue(soldier_location)
+        soldier_location = find_new_location(soldier_location, board)
+        can_continue = can_game_continue(soldier_location, mine_locations, flag_locations)
 
     # Once game has ended
     result.end(soldier_location, mine_locations)
