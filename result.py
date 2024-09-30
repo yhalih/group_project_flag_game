@@ -1,3 +1,4 @@
+from pygame import *
 import time
 import soldier
 
@@ -13,7 +14,6 @@ def end(soldier_location, mine_locations):
 
     end_print(win, soldier_location)
     time.sleep(3)
-    sys.exit()
     quit()
 
 
