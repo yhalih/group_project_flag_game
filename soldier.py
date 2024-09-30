@@ -9,7 +9,7 @@ def soldier_legs (x_index, y_index):
     list_tuple= [tup1,tup2]
     return list_tuple
 
-print(soldier_legs(0,0))
+# print(soldier_legs(0,0))
 
 def soldier_body(x_index, y_index):
     list = []
@@ -23,4 +23,4 @@ def soldier_body(x_index, y_index):
         y_index += 1
     return list
 
-print(soldier_body(0,0))
+# print(soldier_body(0,0))
