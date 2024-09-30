@@ -28,3 +28,4 @@ def soldier_body(location):
     return list
 
 print(soldier_body((0,0)))
+# hio
