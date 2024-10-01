@@ -11,6 +11,6 @@ def grass_screen():
     initial.random_bush_bomb('grass', screen)
     initial.placement(screen, 'soldier', SOLDIER_START)
     initial.placement(screen, 'flag', FLAG)
-
+#
 
 grass_screen()

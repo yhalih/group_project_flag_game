@@ -13,7 +13,7 @@ def creating_empty_board():
 def placement(board, item_, wanted_place):
     pic_item = image.load(f'C:\\Users\\jbt\\Desktop\\python\\group_project_flag_game\\bin\\{item_}.png').convert()
     pic_item = transform.scale(pic_item, proportion.pixelize(ITEM_PROPORTION[item_]))
-    board.blit(pic_item, wanted_place)
+    board.blit(pic_item, proportion.pixelize(wanted_place))
     display.flip()
 
 
@@ -21,7 +21,7 @@ def placement(board, item_, wanted_place):
 def random_tup_in_board():
     rand_x = random.randrange(COLS_IN_BOARD)
     rand_y = random.randrange(COLS_IN_BOARD)
-    rand_tup = proportion.pixelize((rand_x, rand_y))
+    rand_tup = (rand_x, rand_y)
     return rand_tup
 
 

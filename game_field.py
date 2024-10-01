@@ -30,7 +30,7 @@ def can_game_continue(soldier_location, mine_locations, flag_locations):
 def find_new_location(soldier_location, board):
     pressed = key.get_pressed()
     new_location = [soldier_location[0], soldier_location[1]]
-
+    #
     # Showing the secret screen
     if pressed[K_RETURN]:
         # show secret screen

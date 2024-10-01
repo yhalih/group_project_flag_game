@@ -9,7 +9,7 @@ def soldier_legs (location):
     tup2 = (x_index2, y_index2)
     list_tuple= [tup1,tup2]
     return list_tuple
-
+#
 
 def soldier_body(location):
     x_index = location[0]
